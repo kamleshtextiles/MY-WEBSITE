@@ -23,19 +23,15 @@ nav ul li {
 }
 
 nav ul li a {
-    color: black;
+    color: white;
     text-decoration: none;
-}
-
-nav ul li a {
-    color: #555;
 }
 
 /* Hero Section */
 .hero {
     background-image: url('hero-image.jpg'); /* Add your hero image */
     background-size: cover;
-    color: white;
+    color: black;
     text-align: center;
     padding: 100px 20px;
 }
