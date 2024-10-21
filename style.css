@@ -89,6 +89,16 @@ nav ul li a {
     justify-content: center;
 }
 
+/* Call to Action Button Styles */
+.cta-button {
+    background-color: #ff5733; /* Button color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px; /* Add space above the button */
+}
+
 /* Footer */
 footer {
     background-color: #333;
