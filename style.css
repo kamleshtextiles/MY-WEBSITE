@@ -27,6 +27,10 @@ nav ul li a {
     text-decoration: none;
 }
 
+nav ul li a {
+    color: #555;
+}
+
 /* Hero Section */
 .hero {
     background-image: url('hero-image.jpg'); /* Add your hero image */
