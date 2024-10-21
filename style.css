@@ -1,20 +1,63 @@
-/* Basic styles for your website */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+/* Basic Reset */
+body, h1, h2, h3, p, ul {
     margin: 0;
     padding: 0;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Header Navigation */
 header {
     background-color: #333;
     color: white;
-    padding: 15px;
+    padding: 15px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('hero-image.jpg'); /* Add your hero image */
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.cta-button {
+    background-color: #ff5733; /* Button color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/* Featured Products */
+.featured-products {
+    padding: 20px;
     text-align: center;
 }
 
-main {
-    padding: 20px;
+.product {
+    display: inline-block;
+    margin: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
     background-color: white;
 }
 
@@ -22,8 +65,8 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
+    padding: 15px;
+    position: relative;
     bottom: 0;
+    width: 100%;
 }
