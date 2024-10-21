@@ -1,12 +1,8 @@
-/* Basic Reset */
-body, h1, h2, h3, p, ul {
-    margin: 0;
-    padding: 0;
-}
-
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
+    margin: 0;
 }
 
 /* Header Navigation */
@@ -40,27 +36,60 @@ nav ul li a {
     padding: 100px 20px;
 }
 
-.cta-button {
-    background-color: #ff5733; /* Button color */
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-}
-
 /* Featured Products */
 .featured-products {
     padding: 20px;
     text-align: center;
 }
 
+/* 3D Product Card Styles */
 .product {
     display: inline-block;
     margin: 20px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    background-color: white;
+    perspective: 1000px; /* Adds perspective to the container */
 }
 
+.product .card {
+    width: 250px; /* Width of the card */
+    height: 350px; /* Height of the card */
+    position: relative; /* Enables absolute positioning for inner elements */
+    transform-style: preserve-3d; /* Allows 3D transformations */
+    transition: transform 0.6s; /* Transition for hover effect */
+}
+
+.product .card:hover {
+    transform: rotateY(180deg); /* Rotates card on hover */
+}
+
+.product .card .front, 
+.product .card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides back face when rotated */
+    border: 1px solid #ccc; /* Optional border for the card */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.product .card .front {
+    background-color: #fff; /* Front card color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product .card .back {
+    background-color: #4CAF50; /* Back card color */
+    color: white;
+    transform: rotateY(180deg); /* Rotate back side */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Footer */
 footer {
     background-color: #333;
     color: white;
