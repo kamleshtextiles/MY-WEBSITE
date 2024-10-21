@@ -52,7 +52,7 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background-image: url('kamleshtextiles/images/hero-bg.jpg'); /* Add your hero background image */
+    background-image: url('images/hero-bg.jpg'); /* Add your hero background image */
     background-size: cover;
     background-position: center;
     height: 80vh; /* Full-screen hero */
