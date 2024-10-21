@@ -1,97 +1,185 @@
+/* General Styles */
 body {
-    font-family: 'Arial', sans-serif; /* Font for the entire page */
-    margin: 0; /* Removes default margin */
-    padding: 0; /* Removes default padding */
+    font-family: 'Poppins', sans-serif; /* Fabcurate uses modern fonts like Poppins */
+    background-color: #f9f9f9; /* Light background */
+    color: #333; /* General text color */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Header Navigation */
 header {
-    background-color: #4a90e2; /* Darker blue for header */
-    color: white; /* White text color */
-    padding: 15px 20px; /* Space around header */
-    display: flex; /* Align logo and menu horizontally */
-    justify-content: space-between; /* Separates logo and menu */
-    align-items: center; /* Vertically centers everything */
+    background-color: white; /* White background for header */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.logo img {
-    width: 150px; /* Adjust logo size */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: 0 auto;
 }
 
 nav ul {
-    list-style-type: none; /* Removes bullet points */
-    padding: 0; /* Removes padding */
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    width: 60%; /* Adjust depending on logo size */
 }
 
 nav ul li {
-    display: inline; /* Displays list items in a row */
-    margin: 0 15px; /* Adds space between items */
+    margin: 0 15px;
 }
 
 nav ul li a {
-    text-decoration: none; /* Removes underline from links */
-    color: white; /* Link color */
-    transition: color 0.3s; /* Smooth transition for hover effect */
+    color: #333; /* Black text color */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
-    color: #ffcc00; /* Color change on hover */
+    color: #ff5733; /* Hover effect with Fabcurate's orange accent */
 }
 
+/* Hero Section */
 .hero {
-    background-image: url('images/hero-bg.jpg'); /* Background image for hero */
-    background-size: cover; /* Cover entire section */
-    color: white; /* White text color */
-    padding: 80px 20px; /* Space around content */
-    text-align: center; /* Center-aligns text */
+    background-image: url('KAMLESH TEXTILES/images/hero-image.jpg'); /* Add your hero background image */
+    background-size: cover;
+    background-position: center;
+    height: 80vh; /* Full-screen hero */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
 }
 
-.product-showcase {
-    padding: 20px; /* Adds space around products */
-    display: flex; /* Displays products in a row */
-    justify-content: space-around; /* Evenly spaces products */
-    flex-wrap: wrap; /* Allows products to wrap onto new lines */
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
-.product-card {
-    border: 1px solid #ccc; /* Border around product card */
-    border-radius: 10px; /* Rounded corners */
-    padding: 10px; /* Space inside the card */
-    margin: 10px; /* Space between cards */
-    text-align: center; /* Centers text inside the card */
-    width: 200px; /* Fixed width for each card */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    transition: transform 0.3s; /* Smooth transition for hover effect */
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
 }
 
-.product-card:hover {
-    transform: translateY(-5px); /* Elevates card on hover */
+.hero .cta-button {
+    background-color: #ff5733; /* Fabcurate orange button */
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
-.product-card img {
-    width: 100%; /* Responsive image */
-    height: auto; /* Maintains aspect ratio */
+.hero .cta-button:hover {
+    background-color: #e64e2a; /* Darker hover state */
 }
 
-.gallery {
-    padding: 20px; /* Space around gallery */
-    text-align: center; /* Centers text */
+/* Featured Products Section */
+.featured-products {
+    padding: 50px 0;
+    background-color: #fff; /* White background */
+    text-align: center;
 }
 
-.gallery-images {
-    display: flex; /* Displays images in a row */
-    justify-content: space-around; /* Evenly spaces images */
-    flex-wrap: wrap; /* Allows images to wrap onto new lines */
+.featured-products h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
 }
 
-.gallery-images img {
-    width: 220px; /* Fixed width for each gallery image */
-    height: auto; /* Maintains aspect ratio */
-    margin: 10px; /* Space between images */
+.product-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
+.product {
+    width: 23%;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s;
+}
+
+.product:hover img {
+    opacity: 0.8; /* Slight opacity change on hover */
+}
+
+.product h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 15px 0;
+    color: #333;
+}
+
+.product p {
+    font-size: 1rem;
+    color: #999;
+}
+
+.product .cta-button {
+    display: inline-block;
+    background-color: #ff5733;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 20px 0;
+    transition: background-color 0.3s;
+}
+
+.product .cta-button:hover {
+    background-color: #e64e2a;
+}
+
+/* Footer */
 footer {
-    text-align: center; /* Centers footer text */
-    padding: 10px; /* Space around footer */
-    background-color: #4a90e2; /* Darker blue for footer */
-    color: white; /* White text color */
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+footer a:hover {
+    color: #ff5733;
+}
+
+footer p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
 }
